@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    
+	<head>
+        <title>Web Form</title>
+        <link href='styles.css' rel='stylesheet' type='text/css' />
+		<link href='https://fonts.googleapis.com/css?family=Garamond' rel='stylesheet'>
+    </head>
+	
+    <body>
+        <div id="header">
+			<h1>Register</h1>
+		</div>
+        <div id="wrapper">
+            <div id="inputbox">
+                <form name="input" action="#" method="post">
+            	    First Name: <input type="text" name="firstname" value=""><br/>
+            	    Last Name: <input type="text" name="lastname" value=""><br/>
+					Age (optional): <input type="text" name="age" value=""><br/>
+					Gender (optional):<br/>
+                    <input type="radio" name="sex" value="male">Male
+                    <input type="radio" name="sex" value="female">Female<br/><br/>
+					<br/>
+					User Name: <input type="text" name="username" value=""><br/><br/>
+					Password: <input type="password" name="password" value=""><br/><br/>
+					Email: <input type="text" name="email" value=""><br/>
+					<br/><br/>
+                </form>
+            </div>
+            <div>
+                <form id="sigoptions">
+					Signature?
+					<select name="sig">
+						<option name="Yes">Yes</option>
+						<option name="No">No</option>
+					</select>
+					<br/>
+					Color: <input type="color" name="color"><br/>
+                    Signature: <br/><textarea name="msg"></textarea><br/>
+					<br/>
+				</form>
+				<form id="options">
+					Current Browser: <input list="browsers" name="browser">
+						<datalist id="browsers">
+							<option value="Internet Explorer">
+							<option value="Firefox">
+							<option value="Chrome">
+							<option value="Opera">
+							<option value="Safari">
+						</datalist>
+					<br/><br/>
+                    
+                    <input type="checkbox" name="notify" value="updates" checked>Send me emails about updates<br/>
+                    <input type="checkbox" name="notify" value="services" checked>Send me emails about services offered by other sites<br/><br/> 
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </body>
+	
+</html>
