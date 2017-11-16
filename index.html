@@ -3,21 +3,33 @@
     
 	<head>
         <title>Web Form</title>
-        <link href='styles.css' rel='stylesheet' type='text/css' />
+        <link href='styles.css' rel='stylesheet' type='text/css'/>
+		<script src='script.js'></script>
+		
 		<link href='https://fonts.googleapis.com/css?family=Garamond' rel='stylesheet'>
-    </head>
+		
+		<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		
+		<script>
+			$(function() {
+				$("#birthday").datepicker();
+			});
+		</script>
+	</head>
 	
     <body>
-        <div id="header">
+        <div class="header">
 			<h1>Register</h1>
 		</div>
-        <div id="wrapper">
-            <div id="inputbox">
+        <div class="wrapper">
+            <div class="inputbox">
                 <form name="input" action="#" method="post">
             	    First Name: <input type="text" name="firstname" value=""><br/>
-            	    Last Name: <input type="text" name="lastname" value=""><br/>
-					Age (optional): <input type="text" name="age" value=""><br/>
-					Gender (optional):<br/>
+            	    Last Name: <input type="text" name="lastname" value=""><br/>			
+					Birthday: <input type="text" id="birthday" name="bday"><br/>
+					Gender:<br/>
                     <input type="radio" name="sex" value="male">Male
                     <input type="radio" name="sex" value="female">Female<br/><br/>
 					<br/>
@@ -36,8 +48,7 @@
 					</select>
 					<br/>
 					Color: <input type="color" name="color"><br/>
-                    Signature: <br/><textarea name="msg"></textarea><br/>
-					<br/>
+                    Signature: <br/><textarea name="msg"></textarea><br></br>
 				</form>
 				<form id="options">
 					Current Browser: <input list="browsers" name="browser">
@@ -48,11 +59,17 @@
 							<option value="Opera">
 							<option value="Safari">
 						</datalist>
-					<br/><br/>
-                    
+					<br></br>
                     <input type="checkbox" name="notify" value="updates" checked>Send me emails about updates<br/>
-                    <input type="checkbox" name="notify" value="services" checked>Send me emails about services offered by other sites<br/><br/> 
-                    <input type="submit" value="Submit">
+                    <input type="checkbox" name="notify" value="services" checked>Send me emails about services offered by other sites<br/>                   
+					<br></br>
+					I am:
+					<select id="dropdown">
+						<option value="nothuman">Not Human</option>
+						<option value="human">Human</option>
+					</select>
+					<br/><br/>
+					<input type="submit" value="Submit">
                 </form>
             </div>
         </div>
