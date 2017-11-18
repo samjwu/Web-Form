@@ -32,16 +32,20 @@
 
 /*ids*/
 
-#inputs input {
+#input {
 	width: 100%;
 	clear: both;
 }
 
 #sigoptions {
-	width: 50px;
+	width: 200px;
 	clear: both;
 }
 
+#options {
+	width: 400px;
+	clear: both;
+}
 
 /*elements*/
 
